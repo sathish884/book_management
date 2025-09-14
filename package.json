@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app.js",
-    "prod": "cross-env NODE_ENV=production nodemon app.js",
-    "test": "cross-env NODE_ENV=test nodemon app.js"
+    "start": "node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "prod": "cross-env NODE_ENV=production nodemon index.js",
+    "test": "cross-env NODE_ENV=test nodemon index.js"
   },
   "keywords": [],
   "author": "",
