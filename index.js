@@ -1,16 +1,16 @@
-const path = require("path");
-const dotenv = require("dotenv");
 const userRouter = require('./routes/UserRoutes');
 const bookRoutes = require('./routes/BooksRoutes');
 
 //const envFile = path.resolve(process.cwd(), "env", `.env.${process.env.NODE_ENV || "development"}`);
-dotenv.config();
 
 //console.log("Loaded ENV from:", envFile); // DEBUG
 //console.log("MONGO_URI =", process.env.MONGO_URI); // DEBUG
 
 //"prod": "cross-env NODE_ENV=production nodemon index.js",
 //    "test": "cross-env NODE_ENV=test nodemon index.js"
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 
 const express = require("express");
