@@ -1,6 +1,9 @@
 const userRouter = require('./routes/UserRoutes');
 const bookRoutes = require('./routes/BooksRoutes');
-require("dotenv").config();
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 
 const express = require("express");
 const cors = require("cors");
