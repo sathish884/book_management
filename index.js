@@ -8,9 +8,9 @@ const bookRoutes = require('./routes/BooksRoutes');
 
 //"prod": "cross-env NODE_ENV=production nodemon index.js",
 //    "test": "cross-env NODE_ENV=test nodemon index.js"
-if (process.env.NODE_ENV !== "production") {
+//if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
-}
+//}
 
 
 const express = require("express");
