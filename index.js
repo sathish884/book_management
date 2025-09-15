@@ -1,8 +1,9 @@
 const userRouter = require('./routes/UserRoutes');
 const bookRoutes = require('./routes/BooksRoutes');
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV || "development"}`
 });
+
 
 
 const express = require("express");
@@ -19,6 +20,10 @@ app.use('/api', userRouter);
 app.use("/api/books", bookRoutes);
 
 const PORT = process.env.PORT || 8080;
+
+console.log("Loaded env file:", `.env.${process.env.NODE_ENV || "development"}`);
+console.log("MONGO_URI:", process.env.MONGO_URI);
+
 
 // connect to database
 connectDB();
